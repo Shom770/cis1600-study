@@ -1,6 +1,6 @@
 // Renders plain-text math with real subscripts and superscripts:
 // v_k, v_{i+1}, 2^{2n}, 4^n become <sub>/<sup>. Everything else passes through.
-const RE = /([_^])(?:\{([^{}]*)\}|([A-Za-z0-9]+))/g;
+const RE = /([_^])(?:\{([^{}]*)\}|(\d+|[A-Z]{2,3}(?![a-z])|[A-Za-z]))/g;
 
 export default function MathText({ children }) {
   const text = String(children ?? "");

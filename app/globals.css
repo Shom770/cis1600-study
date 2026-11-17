@@ -513,3 +513,8 @@ code { font-family: var(--mono); font-size: 0.88em; background: rgba(28,31,38,0.
   .btn kbd, .pill-btn kbd { display: none; }
   .problem-foot .group { flex-wrap: wrap; }
 }
+
+/* LaTeX-typeset proofs */
+.latex { font-family: KaTeX_Main, "Latin Modern Roman", "Computer Modern Serif", "Times New Roman", serif; font-size: 1.16rem; line-height: 1.7; color: var(--graphite); max-width: 70ch; animation: drop 0.22s ease-out; }
+.latex p { margin: 0 0 0.35em; }
+.latex .katex { font-size: 1.04em; }

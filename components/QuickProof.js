@@ -5,6 +5,7 @@ import { TOPICS, TOPIC_BY_SLUG, DIFFICULTY } from "../lib/topics";
 import { KEYS, useStored } from "../lib/storage";
 import { ALL_WRITTEN } from "../lib/pool";
 import MathText from "./MathText";
+import LatexText from "./LatexText";
 
 const PROOFS = ALL_WRITTEN.filter((q) => q.kind === "proof");
 const VERDICT = {
@@ -138,7 +139,7 @@ export default function QuickProof() {
                 ) : (
                   <div className="muted" style={{ fontSize: "0.9rem", marginBottom: 8 }}>{q.solutions[0].approach}</div>
                 )}
-                <div className="solution" key={tab}><MathText>{q.solutions[tab].text}</MathText></div>
+                <LatexText key={tab}>{q.solutions[tab].text}</LatexText>
               </div>
             )}
 
